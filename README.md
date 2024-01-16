@@ -1,13 +1,13 @@
 # Taming Self-Training for Open-Vocabulary Object Detection
 
-Fork from the Official implementation of online self-training and a split-and-fusion (SAF) head for Open-Vocabulary Object Detection (OVD).
+Fork from the Official implementation of online self-training and a split-and-fusion (SAF) head for Open-Vocabulary Object Detection (OVD)[arXiv](https://arxiv.org/abs/2308.06412).
+
 Thanks the author for the open-source code.
-[arXiv](https://arxiv.org/abs/2308.06412)
 
 
 ## Training on COCO-OVD
 ```bash
-CUDA_VISIBLE_DEVICES=5 python3 ./train_net.py \
+python3 ./train_net.py \
         --num-gpus 1 \
         --config-file ./sas_det/configs/ovd_coco_R50_C4_ensemble_PLs.yaml \
         MODEL.WEIGHTS pretrained_ckpt/model_final.pth \
